@@ -7,14 +7,14 @@ io.on('connect',(socket)=>{
     io.emit('allMessage', message);
     let id = socket.id;
     
-    socket.on('myNicname',nicname=>{
-        User.create(nicname,id);
-        io.to(id).emit('sendSocketId',id);
+    socket.on('myNickname',nickname=>{
+        User.create(nickname,socketId);
+        io.to(id).emit('sendSocketId',socketId);
         changeList();
     });
 
-    socket.on('send',(message,nicname)=>{
-        const newMessage = Message.create(message,nicname);
+    socket.on('send',(message,nickname)=>{
+        const newMessage = Message.create(message,nickname);
         socket.emit('chat',newMessage);
     });
     
