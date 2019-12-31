@@ -8,12 +8,12 @@ Get/chat
 ```
 {
     user:[
-        nicname,
-        socketId
+        nicname: String,
+        socketId: String
     ],
     message:[
-        nicname,
-        message
+        nicname: String,
+        message: String
     ]
 }
 ```
@@ -34,7 +34,7 @@ myNicname(emit)
 sendSocketId(on)
 -
 ```
-    id: String
+    socketId: String
 ```
 send(emit)
 -
@@ -42,8 +42,8 @@ chat(on)
 -
 ```
 newMessage:{
-    nicname,
-    message
+    nicname: String,
+    message: String
 }
 ```
 disconnect(emit)
@@ -52,7 +52,7 @@ member(on)
 -
 ```
 user:[{
-    nicname,
-    socketId
+    nicname: String,
+    socketId: String
 }]
 ```
