@@ -38,10 +38,16 @@ sendSocketId(on)
 ```
 send(emit)
 -
+```
+Message:{
+    nicname: String,
+    message: String
+}
+```
 chat(on)
 -
 ```
-newMessage:{
+Message:{
     nicname: String,
     message: String
 }
