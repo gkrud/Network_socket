@@ -20,25 +20,25 @@ Get/chat
 
 Event
 =
-connect(on)
+connect(emit)
 -
-allMessage(emit)
+allMessage(on)
 -
 ```
 message:[{
     String
 }]
 ```
-myNicname(on)
+myNicname(emit)
 -
-sendSocketId(emit)
+sendSocketId(on)
 -
 ```
     id: String
 ```
-send(on)
+send(emit)
 -
-chat(emit)
+chat(on)
 -
 ```
 newMessage:{
@@ -46,9 +46,9 @@ newMessage:{
     message
 }
 ```
-disconnect(on)
+disconnect(emit)
 -
-member(emit) 
+member(on) 
 -
 ```
 user:[{
